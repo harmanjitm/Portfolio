@@ -4,7 +4,7 @@ import { Link as RouterLink } from 'react-router-dom'
 import { Link as RouterScroll } from 'react-scroll'
 
 export const SidebarWrapper = styled.div`
-  color: white;
+  color: black;
 `
 
 export const SidebarLink = styled(RouterScroll)`
@@ -18,7 +18,7 @@ export const SidebarLink = styled(RouterScroll)`
   color: white;
   cursor: pointer;
 
-  &::hover {
+  &:hover {
     color: #e63946;
     transition: 0.2s ease-in-out;
   }
@@ -42,7 +42,7 @@ export const SidebarButton = styled(RouterLink)`
   transition: 0.2s ease-in-out;
   text-decoration: none;
 
-  &::hover {
+  &:hover {
     transition: 0.2s ease-in-out;
     background: grey;
     color: white;
@@ -56,11 +56,11 @@ export const SidebarContainer = styled.aside`
   height: 100%;
   background: darkgrey;
   align-items: center;
-  display: grid;
   top: 0;
   left: 0;
-  transition: 0.3s ease-in-out;
-  opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
+  transition: 0.2s ease-in-out;
+  opacity: ${({ isOpen }) => (isOpen ? '100%' : '0%')};
+  display: ${({ isOpen }) => (isOpen ? 'grid' : 'none')};
 `
 
 export const SidebarIconClose = styled(FaTimes)`

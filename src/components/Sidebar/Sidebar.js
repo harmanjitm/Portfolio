@@ -10,17 +10,17 @@ import {
   SidebarLink
 } from './SidebarItems'
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, toggle }) => {
   return (
-    <SidebarContainer>
-      <SidebarIcon>
+    <SidebarContainer isOpen={isOpen}>
+      <SidebarIcon onClick={toggle}>
         <SidebarIconClose/>
       </SidebarIcon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about">About Me</SidebarLink>
-          <SidebarLink to="about">Projects</SidebarLink>
-          <SidebarLink to="about">Contact</SidebarLink>
+          <SidebarLink to="about" onClick={toggle}>About Me</SidebarLink>
+          <SidebarLink to="projects" onClick={toggle}>Projects</SidebarLink>
+          <SidebarLink to="contact" onClick={toggle}>Contact</SidebarLink>
         </SidebarMenu>
         <SidebarButtonWrapper>
           <SidebarButton to={{ pathname: 'https://github.com/harmanjitm' }} target='_blank'>GitHub</SidebarButton>

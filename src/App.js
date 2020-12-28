@@ -5,10 +5,16 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import Sidebar from './components/Sidebar/Sidebar';
 
 const App = () => {
+  const [ isOpen, setIsOpen ] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  }
+
   return (
     <Router>
-      <Sidebar/>
-      <Navbar/>
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Navbar toggle={toggle} />
       <p>Test</p>
     </Router>
   );
