@@ -4,7 +4,7 @@ import { Link as RouterScroll } from 'react-scroll'
 
 export const Nav = styled.nav`
   background: black;
-  height: 100px;
+  height: 60px;
   /* margin-top: -100px; */
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@ export const Nav = styled.nav`
 export const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 100px;
+  height: 60px;
   z-index: 1;
   width: 100%;
   padding: 0 24px;
@@ -46,7 +46,7 @@ export const NavMenuIcon = styled.div`
     top: 0;
     right: 0;
     transform: translate(-100%, 60%);
-    margin-top: 14px;
+    margin-top: -4px;
     font-size: 28px;
     cursor: pointer;
     color: white;
