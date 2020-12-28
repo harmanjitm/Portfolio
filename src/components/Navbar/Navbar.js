@@ -26,14 +26,14 @@ const Navbar = () => {
 							<NavLinks to='about'>About Me</NavLinks>
 						</NavItem>
 						<NavItem>
-							<NavLinks to='work'>Work</NavLinks>
+							<NavLinks to='work'>Projects</NavLinks>
 						</NavItem>
 						<NavItem>
 							<NavLinks to='contact'>Contact</NavLinks>
 						</NavItem>
 					</NavMenu>
 					<NavButton>
-						<NavButtonLink to='github'>GitHub</NavButtonLink>
+						<NavButtonLink to={{ pathname: 'https://github.com/harmanjitm' }} target='_blank'>GitHub</NavButtonLink>
 					</NavButton>
 				</NavContainer>
 			</Nav>
