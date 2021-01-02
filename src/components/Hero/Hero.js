@@ -12,7 +12,6 @@ const Hero = ({height, width}) => {
             color: {
               value: "#08090C",
             },
-            size: 10,
           },
           backgroundMode: {
             enable: false,
@@ -22,6 +21,14 @@ const Hero = ({height, width}) => {
           interactivity: {
             detectsOn: "window",
             events: {
+              onHover: {
+                enable: true,
+                parallax: {
+                  enable: true,
+                  force: 25,
+                  smooth: 10
+                }
+              },
               resize: true,
             },
             modes: {
@@ -38,10 +45,10 @@ const Hero = ({height, width}) => {
           },
           particles: {
             color: {
-              value: "#e63946",
+              value: "#ffffff",
             },
             links: {
-              color: "#e63946",
+              color: "#ffffff",
               distance: 150,
               enable: true,
               opacity: 0.1,
@@ -53,7 +60,7 @@ const Hero = ({height, width}) => {
             move: {
               direction: "top",
               enable: true,
-              outMode: "",
+              outMode: "out",
               random: true,
               speed: 1,
               straight: false,
@@ -69,7 +76,7 @@ const Hero = ({height, width}) => {
               value: 0.2,
             },
             shape: {
-              type: "circle",
+              type: "line",
             },
             size: {
               random: true,
