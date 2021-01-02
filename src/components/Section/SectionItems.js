@@ -12,7 +12,7 @@ export const SectionContainer = styled.div`
 export const SectionWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 860px;
+  height: 880px;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;

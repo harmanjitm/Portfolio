@@ -19,7 +19,7 @@ const App = () => {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <Hero width={size.width} height={size.height} />
-      <Section />
+      <Section height={size.height}/>
     </Router>
   );
 }

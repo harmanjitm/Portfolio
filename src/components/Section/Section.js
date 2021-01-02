@@ -10,11 +10,11 @@ import {
   Subtitle
 } from './SectionItems'
 
-const Section = () => {
+const Section = ({ height }) => {
   return (
     <>
       <SectionContainer>
-        <SectionWrapper>
+        <SectionWrapper height={height}>
           <SectionRow>
             <Column1>
               <TextWrapper>

@@ -87,7 +87,7 @@ const Hero = ({height, width}) => {
           detectRetina: true,
         }}
       />
-        <SectionWrapper>
+        <SectionWrapper height={height}>
           <SectionRow>
             <Column1>
               <TextWrapper>
