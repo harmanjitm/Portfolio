@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import { BrowserRouter as Router } from 'react-router-dom'
 import Sidebar from './components/Sidebar/Sidebar';
+import Hero from './components/Hero/Hero';
 
 const App = () => {
+  const size = useResizeWindow();
   const [ isOpen, setIsOpen ] = useState(false);
 
   const toggle = () => {
@@ -15,9 +17,32 @@ const App = () => {
     <Router>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <p>Test</p>
+      <Hero width={size.width} height={size.height-70}/>
     </Router>
   );
+}
+
+function useResizeWindow() {
+  const [size, setSize] = useState({
+    width: 0,
+    height: 0,
+  });
+
+  useEffect(() => {
+    function handleResize() {
+      setSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return size;
 }
 
 export default App;
