@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import { BrowserRouter as Router } from 'react-router-dom'
 import Sidebar from './components/Sidebar/Sidebar';
 import Hero from './components/Hero/Hero';
+import Section from './components/Section/Section';
 
 const App = () => {
   const size = useResizeWindow();
@@ -17,7 +18,8 @@ const App = () => {
     <Router>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <Hero width={size.width} height={size.height-70}/>
+      <Hero width={size.width} height={size.height} />
+      <Section />
     </Router>
   );
 }

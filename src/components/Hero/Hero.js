@@ -1,5 +1,6 @@
 import React from 'react'
 import Particles from 'react-tsparticles'
+import { Column1, Heading, SectionRow, SectionWrapper, Subtitle, TextWrapper, Title } from '../Section/SectionItems'
 import {HeroContainer} from './HeroItems'
 
 const Hero = ({height, width}) => {
@@ -14,7 +15,7 @@ const Hero = ({height, width}) => {
             },
           },
           backgroundMode: {
-            enable: false,
+            enable: true,
             zIndex: -1
           },
           fpsLimit: 90,
@@ -86,6 +87,17 @@ const Hero = ({height, width}) => {
           detectRetina: true,
         }}
       />
+        <SectionWrapper>
+          <SectionRow>
+            <Column1>
+              <TextWrapper>
+                <Title>Title</Title>
+                <Heading>Heading</Heading>
+                <Subtitle>Subtitle</Subtitle>
+              </TextWrapper>
+            </Column1>
+          </SectionRow>
+        </SectionWrapper>
     </HeroContainer>
   )
 }

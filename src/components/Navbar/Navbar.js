@@ -9,7 +9,8 @@ import {
 	NavItem, 
 	NavLinks,
 	NavButton,
-	NavButtonLink 
+	NavButtonLink,
+	NavLine 
 } from './NavbarItems'
 
 const Navbar = ({ toggle }) => {
@@ -37,6 +38,7 @@ const Navbar = ({ toggle }) => {
 					</NavButton>
 				</NavContainer>
 			</Nav>
+			<NavLine/>
 		</>
 	)
 }
