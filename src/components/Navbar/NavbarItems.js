@@ -113,6 +113,7 @@ export const NavButtonLink = styled(RouterLink)`
 `
 
 export const NavLine = styled.div`
+  position: fixed;
   background-color: #e63946;
   width: 100%;
   height: 2px;

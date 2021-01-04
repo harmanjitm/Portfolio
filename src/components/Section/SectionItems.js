@@ -28,7 +28,7 @@ export const SectionRow = styled.div`
   grid-template-areas: 'col1 col2';
 
   @media screen and (max-width: 768px) {
-    grid-template-areas: 'col1' 'col2';
+    grid-template-areas: 'col2' 'col1';
   }
 `
 

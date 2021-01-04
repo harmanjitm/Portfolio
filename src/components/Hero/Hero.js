@@ -1,13 +1,20 @@
 import React from 'react'
 import Particles from 'react-tsparticles'
-import { Column1, Heading, SectionRow, SectionWrapper, Subtitle, TextWrapper, Title } from '../Section/SectionItems'
+import { 
+  Column1, 
+  Column2, 
+  Heading, 
+  SectionRow, 
+  SectionWrapper, 
+  Subtitle, 
+  TextWrapper
+} from '../Section/SectionItems'
 import {HeroContainer} from './HeroItems'
 
 const Hero = ({height, width}) => {
   return (
     <HeroContainer>
       <Particles height={height} width={width}
-        id="particles"
         options={{
           background: {
             color: {
@@ -87,15 +94,23 @@ const Hero = ({height, width}) => {
           detectRetina: true,
         }}
       />
+      {/* Need to center and create new components for this*/}
         <SectionWrapper height={height}>
           <SectionRow>
             <Column1>
               <TextWrapper>
-                <Title>Title</Title>
-                <Heading>Heading</Heading>
-                <Subtitle>Subtitle</Subtitle>
+                <Heading>Name</Heading>
+                <Subtitle>Subtitle
+                </Subtitle>
               </TextWrapper>
             </Column1>
+            <Column2>
+              <TextWrapper>
+                <Heading>
+                  Text
+                </Heading>
+              </TextWrapper>
+            </Column2>
           </SectionRow>
         </SectionWrapper>
     </HeroContainer>
